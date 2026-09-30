@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #05080f; /* Deep Navy/Black */
+    --surface: #0f141e; /* Elevated surface */
+    --brand-orange: #f97316;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+  }
+
+  body {
+    @apply bg-background text-text-primary antialiased selection:bg-brand-orange/30 selection:text-white min-h-screen;
+  }
+}
+
+@layer utilities {
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange to-amber-400;
+  }
+  
+  .glass-nav {
+    @apply bg-surface/60 backdrop-blur-md;
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px -5px rgba(249, 115, 22, 0.4);
+  }
+}
