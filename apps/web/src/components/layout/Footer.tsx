@@ -76,9 +76,9 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <Link href="/services/e-currency" className="text-base text-text-secondary hover:text-brand-orange transition-colors">E-currency exchange</Link>
               <Link href="/services/gift-cards" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Gift card trading</Link>
-              <Link href="/services/digital" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Digital services</Link>
-              <Link href="/services/payouts" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Cross-border payouts</Link>
-              <Link href="/services/gifts" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Sending gifts abroad</Link>
+              <Link href="/services/digital-services" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Digital services</Link>
+              <Link href="/services/cross-border" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Cross-border payouts</Link>
+              <Link href="/services/gifts-abroad" className="text-base text-text-secondary hover:text-brand-orange transition-colors">Sending gifts abroad</Link>
             </div>
           </div>
 
