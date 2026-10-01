@@ -112,7 +112,7 @@ export default function BentoGrid() {
                <span className="text-xs tracking-widest uppercase font-semibold">IG Placeholder</span>
              </div>
           </div>
-          <Link href="#" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
+          <Link href="https://www.instagram.com/p/Dd54UaboG4B/?utm_source=ig_web_button_share_sheet&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
         </motion.div>
 
         {/* Item 5: Instagram Placeholder 2 (Square, Bottom Center Left) */}
@@ -129,7 +129,7 @@ export default function BentoGrid() {
                <span className="text-[10px] tracking-widest uppercase font-semibold">Placeholder</span>
              </div>
           </div>
-          <Link href="#" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
+          <Link href="https://www.instagram.com/p/DdzMjCviKYL/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
         </motion.div>
 
         {/* Item 6: Small Info Block (Square, Bottom Center Right) */}
