@@ -50,7 +50,8 @@ const cardVariants = {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto relative">
+    <section className="pt-12 pb-24 w-full relative">
+      <div className="px-6 max-w-7xl mx-auto relative z-10">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -102,6 +103,7 @@ export default function ServicesGrid() {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </section>
   );
 }

@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-24 pb-20 md:pt-40 md:pb-28 px-4 w-full flex flex-col items-center justify-center min-h-[100svh] md:min-h-[90vh]">
+    <section className="relative pt-24 pb-10 md:pt-40 md:pb-16 px-4 w-full flex flex-col items-center justify-center min-h-[85svh] md:min-h-[90vh]">
       
       {/* Background elements */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[400px] md:h-[800px] bg-brand-orange/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none z-0" />
@@ -154,6 +154,13 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#0F141E]/30 to-transparent pointer-events-none" />
       </motion.div>
+      
+      {/* Blurred background text spanning full width at the bottom of the viewport */}
+      <div className="absolute bottom-0 left-0 w-full flex justify-center translate-y-1/2 md:translate-y-1/3 pointer-events-none z-0">
+        <span className="text-[16vw] md:text-[13vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none">
+          POWER EXCHANGE
+        </span>
+      </div>
 
     </section>
   );

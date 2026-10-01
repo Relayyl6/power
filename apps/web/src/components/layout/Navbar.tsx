@@ -57,15 +57,17 @@ export default function Navbar() {
 
           {/* Right: CTA & Mobile Toggle */}
           <div className="flex items-center gap-3 z-[100]">
-            <Link 
-              href="/trade" 
+            <a 
+              href="https://wa.me/2348115580802?text=Hello%20Power%20Exchange!%20I%20would%20like%20to%20start%20a%20trade."
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:flex items-center justify-center gap-2 px-5 py-2 text-sm font-semibold text-white bg-brand-orange hover:bg-brand-orange-hover rounded-full transition-all shadow-glow hover:scale-105 active:scale-95"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
               </svg>
               Trade Now
-            </Link>
+            </a>
             
             {/* Hamburger Button (Mobile) */}
             <button 
@@ -108,13 +110,15 @@ export default function Navbar() {
             </div>
             
             <div className="mt-12 flex flex-col gap-4 relative z-10">
-              <Link 
-                href="/trade" 
+              <a 
+                href="https://wa.me/2348115580802?text=Hello%20Power%20Exchange!%20I%20would%20like%20to%20start%20a%20trade."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-2 w-full py-4 text-lg font-bold text-white bg-brand-orange hover:bg-brand-orange-hover rounded-full transition-all shadow-glow"
               >
                 Start Trading Now
-              </Link>
+              </a>
               <p className="text-center text-text-tertiary text-xs mt-4">
                 Fast, secure, and reliable digital solutions.
               </p>

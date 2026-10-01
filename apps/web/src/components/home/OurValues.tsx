@@ -55,9 +55,14 @@ export default function OurValues() {
         viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-16"
       >
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
-          Our Values
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+          Making a Difference
         </h2>
+        <div className="max-w-3xl mx-auto space-y-4 text-text-secondary text-lg leading-relaxed">
+          <p>Your trusted partner for fast, secure, and reliable digital solutions.</p>
+          <p>We buy Bitcoin, USDT, and gift cards, provide international gift delivery, and offer a range of digital services tailored to your needs.</p>
+          <p>Because every transaction represents your money, business, or opportunity, we&apos;re committed to making every experience simple, seamless, and secure.</p>
+        </div>
       </motion.div>
 
       <motion.div 
