@@ -144,7 +144,7 @@ export default function Hero() {
       <motion.div 
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[280px] sm:w-[320px] opacity-15 blur-[6px] z-0 md:top-[40%] md:translate-x-0 md:-left-16 lg:left-0 xl:left-12 2xl:left-[3%] md:w-56 xl:w-72 md:opacity-90 md:blur-none md:z-20 aspect-[3/4] rounded-3xl md:rounded-2xl border-4 border-[#0F141E] shadow-2xl overflow-hidden pointer-events-none"
+        className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[280px] sm:w-[320px] opacity-15 blur-[6px] z-0 lg:top-[40%] lg:translate-x-0 lg:left-0 xl:left-12 2xl:left-[3%] lg:w-56 xl:w-72 lg:opacity-90 lg:blur-none lg:z-20 aspect-[3/4] rounded-3xl lg:rounded-2xl border-4 border-[#0F141E] shadow-2xl overflow-hidden pointer-events-none"
       >
         <Image 
           src="/founder.jpg" 
@@ -157,9 +157,14 @@ export default function Hero() {
       
       {/* Blurred background text spanning full width at the bottom of the viewport */}
       <div className="absolute bottom-0 left-0 w-full flex justify-center translate-y-1/2 md:translate-y-1/3 pointer-events-none z-0">
-        <span className="text-[13.8vw] md:text-[11vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none">
+        <motion.span 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="text-[13.8vw] md:text-[11vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none"
+        >
           POWER EXCHANGE
-        </span>
+        </motion.span>
       </div>
 
     </section>

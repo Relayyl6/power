@@ -97,9 +97,15 @@ export default function OurValues() {
 
       {/* Blurred background text spanning full width at the bottom */}
       <div className="absolute bottom-0 left-0 w-full flex justify-center translate-y-1/2 pointer-events-none z-0">
-        <span className="text-[14.5vw] md:text-[11.8vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none">
+        <motion.span 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "100px" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="text-[14.5vw] md:text-[11.8vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none"
+        >
           TRADE WITH US
-        </span>
+        </motion.span>
       </div>
     </section>
   );

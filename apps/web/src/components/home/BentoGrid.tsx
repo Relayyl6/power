@@ -137,6 +137,24 @@ export default function BentoGrid() {
            </div>
         </motion.div>
 
+        {/* Item 7: Supported Assets Graphic */}
+        <motion.div variants={itemVariants} className="order-7 md:order-none col-span-2 md:col-span-1 row-span-1 rounded-3xl bg-gradient-to-br from-[#1a1a24] to-[#0a0a0f] border border-white/10 overflow-hidden relative group shadow-2xl p-6 flex flex-col items-center justify-center text-center">
+           <div className="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+           <div className="relative z-10 flex gap-[-10px] mb-4">
+             <div className="w-10 h-10 rounded-full bg-[#f2a900] flex items-center justify-center border-2 border-[#0F141E] shadow-lg z-30 transform group-hover:-translate-y-2 transition-transform duration-300">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 13.5l-3.5-2.5-3.5 2.5V6l3.5 2.5L15.5 6v9.5z"/></svg>
+             </div>
+             <div className="w-10 h-10 rounded-full bg-[#26a17b] flex items-center justify-center border-2 border-[#0F141E] shadow-lg z-20 -ml-3 transform group-hover:-translate-y-1 transition-transform duration-300 delay-75">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+             </div>
+             <div className="w-10 h-10 rounded-full bg-[#627eea] flex items-center justify-center border-2 border-[#0F141E] shadow-lg z-10 -ml-3 transform group-hover:-translate-y-2 transition-transform duration-300 delay-150">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 22h20L12 2zm0 3.5l6.5 13h-13L12 5.5z"/></svg>
+             </div>
+           </div>
+           <h3 className="relative z-10 text-white font-display font-bold text-lg mb-1">50+ Assets</h3>
+           <p className="relative z-10 text-text-secondary text-xs">Always expanding.</p>
+        </motion.div>
+
       </motion.div>
     </section>
   );
