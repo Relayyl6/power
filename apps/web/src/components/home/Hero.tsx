@@ -156,8 +156,8 @@ export default function Hero() {
       </motion.div>
       
       {/* Blurred background text spanning full width at the bottom of the viewport */}
-      <div className="absolute bottom-0 left-0 w-full flex justify-center translate-y-1/2 md:translate-y-1/3 pointer-events-none z-0">
-        <span className="text-[16vw] md:text-[13vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none">
+      <div className="absolute bottom-0 left-0 w-full flex justify-center translate-y-1/2 md:translate-y-1/3 pointer-events-none z-0 px-4">
+        <span className="text-[11vw] sm:text-[10vw] md:text-[8.5vw] lg:text-[7.5vw] font-['Elephant',serif] font-bold text-white/[0.06] blur-[2px] whitespace-nowrap tracking-tighter select-none w-full text-center">
           POWER EXCHANGE
         </span>
       </div>
