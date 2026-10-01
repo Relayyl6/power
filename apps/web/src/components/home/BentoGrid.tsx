@@ -106,11 +106,13 @@ export default function BentoGrid() {
               View on Instagram <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </p>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a24] to-[#0a0a0f] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-             <div className="text-white/20 flex flex-col items-center">
-               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mb-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-               <span className="text-xs tracking-widest uppercase font-semibold">IG Placeholder</span>
-             </div>
+          <div className="absolute inset-0 bg-[#0F141E] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+             <iframe 
+               src="https://www.instagram.com/p/Dd54UaboG4B/embed" 
+               className="w-full h-full border-0 pointer-events-none" 
+               scrolling="no"
+               allowTransparency={true}
+             />
           </div>
           <Link href="https://www.instagram.com/p/Dd54UaboG4B/?utm_source=ig_web_button_share_sheet&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
         </motion.div>
@@ -123,11 +125,13 @@ export default function BentoGrid() {
               Transaction IG
             </p>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a24] to-[#0a0a0f] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-             <div className="text-white/20 flex flex-col items-center">
-               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mb-2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-               <span className="text-[10px] tracking-widest uppercase font-semibold">Placeholder</span>
-             </div>
+          <div className="absolute inset-0 bg-[#0F141E] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+             <iframe 
+               src="https://www.instagram.com/p/DdzMjCviKYL/embed" 
+               className="w-full h-[calc(100%+40px)] -mt-10 border-0 pointer-events-none" 
+               scrolling="no"
+               allowTransparency={true}
+             />
           </div>
           <Link href="https://www.instagram.com/p/DdzMjCviKYL/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
         </motion.div>
