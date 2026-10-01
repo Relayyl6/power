@@ -143,7 +143,7 @@ export default function TradeCalculator({ compact = false }: { compact?: boolean
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 top-full mt-2 w-48 bg-[#1E293B] border border-white/10 rounded-2xl shadow-xl overflow-y-auto max-h-[300px] z-[110] flex flex-col p-1"
+                className="absolute right-0 top-full mt-2 w-48 bg-[#1E293B] border border-white/10 rounded-2xl shadow-xl overflow-y-auto max-h-[300px] z-[110] flex flex-col p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               >
                 {(Object.keys(assets) as Array<keyof typeof assets>).map(k => (
                   <button 
@@ -199,7 +199,7 @@ export default function TradeCalculator({ compact = false }: { compact?: boolean
         <div className={`flex flex-col relative ${compact ? 'gap-0' : 'md:flex-row items-center gap-0 md:gap-4'}`}>
           
           {/* Sell Input Container */}
-          <div className="flex-1 w-full flex flex-col gap-2 p-4 bg-background/50 rounded-2xl border border-white/5 group focus-within:border-brand-orange/30 transition-colors z-0">
+          <div className="flex-1 w-full flex flex-col gap-2 p-4 bg-background/50 rounded-2xl border border-white/5 group focus-within:border-brand-orange/30 transition-colors relative z-20">
             <label className="text-sm text-text-secondary font-medium">You pay</label>
             <div className="flex items-center justify-between gap-4">
               <input 
@@ -225,7 +225,7 @@ export default function TradeCalculator({ compact = false }: { compact?: boolean
           </div>
 
           {/* Receive Input Container */}
-          <div className="flex-1 w-full flex flex-col gap-2 p-4 bg-background/50 rounded-2xl border border-white/5 z-0">
+          <div className="flex-1 w-full flex flex-col gap-2 p-4 bg-background/50 rounded-2xl border border-white/5 relative z-0">
             <label className="text-sm text-text-secondary font-medium">You receive</label>
             <div className="flex items-center justify-between gap-4">
               <input 
