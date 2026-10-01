@@ -42,7 +42,7 @@ export default function BentoGrid() {
         className="grid grid-cols-2 md:grid-cols-4 auto-rows-[minmax(180px,auto)] md:auto-rows-[240px] gap-4 md:gap-6"
       >
         {/* Item 1: 1x1 - Fast Payouts */}
-        <motion.div variants={itemVariants} className="col-span-1 row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 p-6 flex flex-col justify-between overflow-hidden relative group shadow-2xl">
+        <motion.div variants={itemVariants} className="order-1 md:order-none col-span-1 md:col-span-1 row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 p-6 flex flex-col justify-between overflow-hidden relative group shadow-2xl">
           <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <h3 className="text-white font-display font-bold text-xl md:text-2xl mb-2">Lightning Fast</h3>
@@ -53,17 +53,8 @@ export default function BentoGrid() {
           </div>
         </motion.div>
 
-        {/* Item 6 (Moved to #2): 1x1 - Security */}
-        <motion.div variants={itemVariants} className="col-span-1 row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 p-6 flex flex-col justify-between overflow-hidden relative group shadow-2xl">
-           <div className="relative z-10 text-white font-display font-bold text-xl md:text-2xl leading-tight">Bank-level<br/>Security</div>
-           <p className="relative z-10 text-text-secondary text-xs md:text-sm mt-2">Your funds are completely protected.</p>
-           <div className="relative z-10 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white/5 flex items-center justify-center self-end border border-white/10 group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 mt-4">
-             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-           </div>
-        </motion.div>
-
         {/* Item 2: 2x2 - Large feature block */}
-        <motion.div variants={itemVariants} className="col-span-2 md:col-span-2 row-span-1 md:row-span-2 rounded-3xl bg-brand-orange p-8 md:p-10 flex flex-col justify-between overflow-hidden relative group shadow-2xl shadow-brand-orange/20 min-h-[280px] md:min-h-0">
+        <motion.div variants={itemVariants} className="order-3 md:order-none col-span-2 md:col-span-2 row-span-1 md:row-span-2 rounded-3xl bg-brand-orange p-8 md:p-10 flex flex-col justify-between overflow-hidden relative group shadow-2xl shadow-brand-orange/20 min-h-[280px] md:min-h-0">
           <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay group-hover:scale-105 group-hover:opacity-60 transition-all duration-700 pointer-events-none">
             <Image src="/crypto_mobile_bg.jpg" alt="Trading Background" fill className="object-cover object-center" />
           </div>
@@ -77,8 +68,8 @@ export default function BentoGrid() {
           </Link>
         </motion.div>
 
-        {/* Item 3: 1x2 Tall Stats (Horizontal on mobile) */}
-        <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 row-span-1 md:row-span-2 rounded-3xl bg-[#0F141E] border border-white/10 p-6 md:p-8 flex flex-col justify-center items-center text-center overflow-hidden relative shadow-2xl">
+        {/* Item 3: 1x2 Tall Stats */}
+        <motion.div variants={itemVariants} className="order-4 md:order-none col-span-2 md:col-span-1 row-span-1 md:row-span-2 rounded-3xl bg-[#0F141E] border border-white/10 p-6 md:p-8 flex flex-col justify-center items-center text-center overflow-hidden relative shadow-2xl">
           <div className="flex flex-row md:flex-col justify-around md:justify-center items-center w-full gap-4 md:gap-12">
             <div className="group cursor-default flex-1">
               <div className="text-brand-orange mb-2 md:mb-4 flex justify-center group-hover:-translate-y-1 transition-transform">
@@ -100,7 +91,7 @@ export default function BentoGrid() {
         </motion.div>
 
         {/* Item 4: Instagram Embed 1 */}
-        <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 row-span-2 rounded-3xl bg-[#0F141E] border border-white/10 overflow-hidden relative group shadow-2xl min-h-[400px] md:min-h-0">
+        <motion.div variants={itemVariants} className="order-5 md:order-none col-span-2 md:col-span-1 row-span-2 md:row-span-2 rounded-3xl bg-[#0F141E] border border-white/10 overflow-hidden relative group shadow-2xl min-h-[400px] md:min-h-0">
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 pointer-events-none">
             <h3 className="text-white font-display font-bold text-2xl mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 drop-shadow-md">Live Trades</h3>
             <p className="text-brand-orange text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 drop-shadow-md bg-black/40 px-3 py-1.5 rounded-full w-fit">
@@ -119,7 +110,7 @@ export default function BentoGrid() {
         </motion.div>
 
         {/* Item 5: Instagram Embed 2 */}
-        <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 row-span-2 md:row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 overflow-hidden relative group shadow-2xl min-h-[400px] md:min-h-0">
+        <motion.div variants={itemVariants} className="order-6 md:order-none col-span-2 md:col-span-1 row-span-2 md:row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 overflow-hidden relative group shadow-2xl min-h-[400px] md:min-h-0">
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             <p className="text-white text-sm font-medium flex items-center gap-2 drop-shadow-md bg-black/40 px-3 py-1.5 rounded-full w-fit">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -135,6 +126,15 @@ export default function BentoGrid() {
              />
           </div>
           <Link href="https://www.instagram.com/p/DdzMjCviKYL/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" aria-label="View Instagram Post" />
+        </motion.div>
+
+        {/* Item 6: Small Info Block */}
+        <motion.div variants={itemVariants} className="order-2 md:order-none col-span-1 md:col-span-1 row-span-1 rounded-3xl bg-[#0F141E] border border-white/10 p-6 flex flex-col justify-between overflow-hidden relative group shadow-2xl">
+           <div className="relative z-10 text-white font-display font-bold text-xl md:text-2xl leading-tight">Bank-level<br/>Security</div>
+           <p className="relative z-10 text-text-secondary text-xs md:text-sm mt-2">Your funds are completely protected.</p>
+           <div className="relative z-10 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white/5 flex items-center justify-center self-end border border-white/10 group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 mt-4">
+             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+           </div>
         </motion.div>
 
       </motion.div>
