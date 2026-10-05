@@ -1,4 +1,4 @@
-# README.md — Power Exchange Digital Services Platform
+Power Exchange Digital Services Platform
 
 ![Dashboard](public/docs/dashboard.png)
 
