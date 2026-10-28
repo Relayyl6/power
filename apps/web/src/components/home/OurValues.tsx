@@ -25,37 +25,68 @@ const values = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export default function OurValues() {
   return (
     <section className="pt-20 pb-20 w-full relative">
       <div className="px-4 sm:px-6 max-w-7xl mx-auto relative z-10">
         
-        {/* Header */}
-        <div className="max-w-2xl mb-12">
-          <p className="text-text-tertiary text-xs uppercase tracking-widest font-mono mb-2">
+        {/* Header with Fade-In */}
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mb-10 sm:mb-12"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-semibold uppercase tracking-wider mb-2.5">
             Our Commitment
-          </p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2.5">
             Making a Difference
           </h2>
           <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
             We buy Bitcoin, USDT, and gift cards, provide international gift delivery, and offer digital solutions built on personal accountability.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Minimal 4-Pillar Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {/* 2-Column Mobile Bento / 4-Column Desktop Grid with Staggered Fade-In */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
+        >
           {values.map((val) => (
-            <div 
+            <motion.div 
               key={val.num}
-              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/20 transition-all flex flex-col justify-between"
+              variants={cardVariants}
+              className="group p-4 sm:p-6 md:p-7 rounded-2xl bg-[#0F141E]/80 border border-white/[0.08] hover:border-brand-orange/40 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
             >
+              {/* Subtle brand orange top border glow on hover */}
+              <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-brand-orange/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
               <div>
-                <span className="font-mono text-xs text-text-tertiary block mb-4">
-                  {val.num}
-                </span>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <span className="font-mono text-[11px] sm:text-xs font-bold text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded border border-brand-orange/20">
+                    {val.num}
+                  </span>
+                </div>
                 
-                <h3 className="font-display text-lg font-semibold text-white mb-2">
+                <h3 className="font-display text-sm sm:text-base md:text-lg font-semibold text-white mb-1.5 sm:mb-2 group-hover:text-brand-orange transition-colors">
                   {val.title}
                 </h3>
                 
@@ -63,9 +94,9 @@ export default function OurValues() {
                   {val.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
 
