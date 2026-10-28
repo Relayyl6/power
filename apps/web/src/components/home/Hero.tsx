@@ -69,7 +69,12 @@ export default function Hero() {
           className="relative group flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
         >
           <div className="relative w-full sm:w-auto h-[60px] md:h-[68px]">
-            <div className="absolute -inset-2 bg-gradient-to-r from-brand-orange to-brand-gold rounded-full blur-lg opacity-40 group-hover:opacity-75 transition duration-500" />
+            {/* Subtle radial ambient bloom — strictly on hover only */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-gold rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 pointer-events-none" />
+            
+            {/* Radiant glowing gradient reflection specifically beneath the button on hover */}
+            <div className="absolute -bottom-3 inset-x-8 h-4 bg-gradient-to-r from-transparent via-brand-orange to-transparent blur-md opacity-0 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute -bottom-1.5 inset-x-14 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <AnimatePresence mode="wait" initial={false}>
               {!isMessaging ? (
@@ -80,7 +85,7 @@ export default function Hero() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => setIsMessaging(true)}
-                  className="relative flex items-center justify-center w-full sm:w-[300px] h-full gap-3 px-6 md:px-10 text-lg md:text-xl font-bold text-white bg-brand-orange hover:bg-brand-orange-hover rounded-full shadow-2xl transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="relative flex items-center justify-center w-full sm:w-[300px] h-full gap-3 px-6 md:px-10 text-lg md:text-xl font-bold text-white bg-brand-orange hover:bg-brand-orange-hover rounded-full shadow-lg transition-all hover:scale-[1.02] whitespace-nowrap"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
